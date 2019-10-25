@@ -1,0 +1,55 @@
+html{
+    font-size: 62.5%; /*Reset para REMS --62.5% = 10px de 16 px (16px es el tamaño por default)*/
+}
+
+body{  /*Se da la fuente a todos los elementos del body*/
+    font-family: 'Lato', sans-serif; /*Fuente de Google fonts*/
+    font-size: 1.6rem;
+}
+
+/*GLOBALES*/
+.contenedor{
+    max-width: 120rem; /*Se indica que tome todo el espacio disponible siempre que no se pase de 1200px.*/
+    margin-left: 0 auto;  /*arriba, derecha, abajo, izquierda. margenes automáticas en derecha e izquierda para centrar*/
+    margin-left: 9rem;     
+    margin-right: 9rem;               
+    
+}
+
+/*  HEADER */
+
+.site-header.inicio{  /*se da estilo a las dos clases en conjunto de esta forma*/
+    background-image: url(../img/contactcenter_principal.jpg); /*se pone la imagen de fondo del encabezado*/
+    background-position:   center center; /*se acomoda la imagen del fondo*/
+    background-size: cover; /*la imagen toma todo el espacio disponible guardando las proporciones*/
+    height: 100vh; /*se pone 100vh para que se detecte el tamaño de la pantalla y la ocupe automáticamente.*/
+    min-height: 60rem; /*se da un tamaño mínimo al viewport height por si la pantalla es muy pequeña*/
+}
+.contenido-header{  /*Las siguientes cuatro caracteristicas separan el contenido del header en cada esquina*/
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.barra{
+    display: flex; /*pone los componentes de este div uno al lado del otro.*/
+    justify-content: space-between;  /*se deja un espacio entre los elementos del contenedor (div)*/
+    padding-top: 3rem;  /*para que las letras dejen espacio hacia adentro del elemento. */
+    align-items: center; /*Alinea los elementos de la barra. */
+}
+
+/*NAVEGACION*/
+.navegacion a{
+    color: white;
+    text-decoration: none; /*Eliminar las líneas de los enlaces*/
+    font-size: 2.5rem;  
+    margin-right: 2rem; /* separar los elementos entre sí */
+    font-family: 'Times New Roman', Times, serif;  /*se da fuente para cambiar la que se había dado al body en general*/
+
+}
+.navegacion a:hover{ /*cambia de color las letras del enlace cuando se pasa el cursor sobre el*/
+    color: rgb(70, 67, 255);
+}
+.navegacion a:last-of-type{ /* Eliminar el margin-right del último enlace (elemento)*/
+    margin: 0;
+}

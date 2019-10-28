@@ -193,8 +193,55 @@ h4{
     font-size: 2.5rem;
 }
 
-/** BLOG **/
-.articulo{
+/** SECCIÓN INFERIOR **/
+.seccion-inferior{
     display: flex;
     justify-content: space-between;
+}
+
+.seccion-inferior .blog{
+    flex-basis: 60%;      /*para que el blog tome el 60% del espacio y los testimoniales el espacio restante*/
+}
+.seccion-inferior .testimoniales{
+    flex-basis: calc(40% - 2rem); /*los testimoniales toman el 40% el espacio y el blog el espacio restante*/
+}
+.entrada-blog{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem; /*separa las imagenes del blog*/
+}
+
+.entrada-blog .imagen{
+    flex-basis: 40%;
+}
+.entrada-blog .texto-entrada{
+    flex-basis: calc(60% - 3rem);
+}
+.texto-entrada a{
+    color: #000000;
+    text-decoration: none;
+}
+.texto-entrada h4{
+    margin: 0;
+    line-height: 1.4;
+}
+.texto-entrada h4::after{  /*Crea el pseudo elemento (la línea verde bajo los h4 del blog*/
+    content: '';
+    display: block; /*Esto nos permite agregar un widht*/
+    width: 15rem;
+    height: .5rem;
+    background-color: rgb(19, 179, 40);
+}
+.texto-entrada span{
+    color: rgb(240, 166, 29);
+}
+.testimonial{
+    background-color: rgb(16, 129, 31);
+    font-size: 2.4rem;
+    padding: 2rem;
+    color: #ffffff;
+    border-radius: 10%;
+}
+.testimonial p{
+    text-align: right;
 }
